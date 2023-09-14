@@ -1,0 +1,56 @@
+<html>
+    <head>
+    <style>
+    button{
+        color:white;
+        background-color: blue;
+        block-size: 2cm;
+        border-color: black;
+        border-width:7px;
+        border-style: double;
+        border-radius: 2px;
+       }
+       fieldset{
+        block-size: 9cm;
+        width:30%;
+        border-color: black;
+        border-width:7px;
+        border-style: double;
+        border-radius: 2px;
+       }
+       body{
+           background-image: -webkit-linear-gradient(cyan,white);
+           font-family:'Times New Roman';
+           font-weight: bold;
+           font-size: medium;
+       }
+       select{
+       
+        width:100%;
+        border-color: black;
+        border-width:7px;
+        border-style: double;
+        border-radius: 2px;
+       }
+   </style>
+</head>
+<fieldset>
+
+<h3>Course Recommendation System</h3>
+    <form action="{{url_for('recommend')}}" method="POST">
+        Chose the course for which you want recommendations for other courses
+        <br/>
+        <select name="pid" id="pid">
+            <option value="1">Bootcamp in Python</option>
+          <option value="2">Machine Learninng in Python</option>
+          <option value="3">Data Visualization Using Tableau</option>
+          <option value="4">Computer Networks</option>
+          <option value="5">Internet Of Things Embedded Systems</option>
+          <option value="6">Android Development</option>
+          <option value="7">Full Stack Development</option>
+          <option value="8">Data Structures</option>
+        </select>
+        <button type="submit">View Recommendations</button>
+    </form>
+</fieldset>
+</html>

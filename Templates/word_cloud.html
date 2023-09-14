@@ -1,0 +1,77 @@
+<html>
+  <head>
+    <style>
+      button {
+        background-color: blue;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        padding: 10px;
+      }
+      button:hover {
+        background-color: darkblue;
+      }
+
+      fieldset {
+        block-size: 9cm;
+        width: 30%;
+        border-color: black;
+        border-width: 7px;
+        border-style: double;
+        border-radius: 2px;
+      }
+      body {
+        background-image: -webkit-linear-gradient(cyan, white);
+        font-family: "Times New Roman";
+        font-weight: bold;
+        font-size: medium;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      select {
+        margin-top: 20px;
+        display: block;
+        width: 100%;
+        padding: 10px;
+        font-size: 1em;
+        border: 7px double black;
+        border-radius: 2px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+      }
+      .container {
+        text-align: center;
+      }
+      form {
+        display: inline-block;
+        text-align: center;
+        padding: 20px;
+        border: 7px double black;
+        border-radius: 2px;
+        background-color: white;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <fieldset>
+    <h3>Product Feedback Analysis</h3>
+    <form action="{{url_for('wordcloud')}}" method="POST">
+      Chose the course for which you want to analyze student feedback
+      <br />
+      <select name="pid" id="pid">
+        <option value="1">Bootcamp in Python</option>
+          <option value="2">Machine Learninng in Python</option>
+          <option value="3">Data Visualization Using Tableau</option>
+          <option value="4">Computer Networks</option>
+          <option value="5">Internet Of Things Embedded Systems</option>
+          <option value="6">Android Development</option>
+          <option value="7">Full Stack Development</option>
+          <option value="8">Data Structures</option>
+        </select>
+      <button type="submit">View Feedback Analysis</button>
+    </form>
+  </fieldset>
+</html>
